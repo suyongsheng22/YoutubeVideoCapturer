@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/YoutubeVideoCapturer/static/css/main.fa283869.chunk.css",
+    "main.js": "/YoutubeVideoCapturer/static/js/main.0fe3b001.chunk.js",
+    "main.js.map": "/YoutubeVideoCapturer/static/js/main.0fe3b001.chunk.js.map",
+    "runtime-main.js": "/YoutubeVideoCapturer/static/js/runtime-main.a70f3436.js",
+    "runtime-main.js.map": "/YoutubeVideoCapturer/static/js/runtime-main.a70f3436.js.map",
+    "static/css/2.d34346ea.chunk.css": "/YoutubeVideoCapturer/static/css/2.d34346ea.chunk.css",
+    "static/js/2.703d13d2.chunk.js": "/YoutubeVideoCapturer/static/js/2.703d13d2.chunk.js",
+    "static/js/2.703d13d2.chunk.js.map": "/YoutubeVideoCapturer/static/js/2.703d13d2.chunk.js.map",
+    "index.html": "/YoutubeVideoCapturer/index.html",
+    "precache-manifest.9dece6c6180bbd0e6686e47746e0eeb8.js": "/YoutubeVideoCapturer/precache-manifest.9dece6c6180bbd0e6686e47746e0eeb8.js",
+    "service-worker.js": "/YoutubeVideoCapturer/service-worker.js",
+    "static/css/2.d34346ea.chunk.css.map": "/YoutubeVideoCapturer/static/css/2.d34346ea.chunk.css.map",
+    "static/css/main.fa283869.chunk.css.map": "/YoutubeVideoCapturer/static/css/main.fa283869.chunk.css.map",
+    "static/js/2.703d13d2.chunk.js.LICENSE.txt": "/YoutubeVideoCapturer/static/js/2.703d13d2.chunk.js.LICENSE.txt",
+    "static/media/Loading.gif": "/YoutubeVideoCapturer/static/media/Loading.f0cd5830.gif",
+    "static/media/NC-left.jpg": "/YoutubeVideoCapturer/static/media/NC-left.79901f59.jpg",
+    "static/media/NC-right.jpg": "/YoutubeVideoCapturer/static/media/NC-right.7605fce8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a70f3436.js",
+    "static/css/2.d34346ea.chunk.css",
+    "static/js/2.703d13d2.chunk.js",
+    "static/css/main.fa283869.chunk.css",
+    "static/js/main.0fe3b001.chunk.js"
+  ]
+}
