@@ -1,14 +1,14 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import YouTube from 'react-youtube';
-import '../Styling/Gallery.css';
-import ToastMessage from '../Components/assests/ToastNavigation';
+import '../Pages/styling/Gallery.css';
+import ToastMessage from '../Pages/assests/ToastNavigation';
 export default class YoutubeVideo extends Component {
    constructor(props) {
       super();
       this.state = {
          FinalArray: [],
          videodetails: [],
-         num: 10,
+         num: 12,
          showToast: false,
          testing: [],
          maximumArray: '',
@@ -16,8 +16,8 @@ export default class YoutubeVideo extends Component {
       };
    }
    componentDidMount() {
-      const channelId = 'UCoC47do520os_4DBMEFGg4A';
-      const ApiKey = 'AIzaSyCkbWGdQRUkchWuehaJz9l7VQPcUYRh0_Y';
+      const channelId = 'UCBFUae4y50CUULtFnZUiIHQ';
+      const ApiKey = 'AIzaSyAtYFVfvspO4umPNeOm16YObR1tXSQBeWM';
       let NextPageToken = '';
       const maxResults = 50;
       var Array = [];
@@ -82,12 +82,6 @@ export default class YoutubeVideo extends Component {
 
       switch (action) {
          case 'Increment': {
-            if (number > this.state.maximumArray) {
-               number = this.state.maximumArray;
-               this.setState({
-                  showToast: true,
-               });
-            }
             number += num;
             break;
          }
@@ -100,6 +94,17 @@ export default class YoutubeVideo extends Component {
             }
             break;
          }
+
+         case 'ShowAll': {
+            number = this.state.maximumArray;
+         }
+      }
+
+      if (number >= this.state.maximumArray) {
+         number = this.state.maximumArray;
+         this.setState({
+            showToast: true,
+         });
       }
 
       this.setState({
@@ -117,7 +122,7 @@ export default class YoutubeVideo extends Component {
       if (this.state.isLoading) {
          return (
             <div className="Gallery_Isloading_Container">
-               <img src={require('../Images/Loading.gif')}></img>
+               <img src={require('../Pages/Images/Loading.gif')}></img>
             </div>
          );
       } else {
@@ -128,8 +133,8 @@ export default class YoutubeVideo extends Component {
             let links = '';
             links = item.contentDetails.upload.videoId;
             const opts = {
-               height: '100%',
-               width: '100%',
+               height: '200px',
+               width: '300px',
             };
 
             return (
@@ -139,6 +144,7 @@ export default class YoutubeVideo extends Component {
                      videoId={links}
                      containerClassName="Youtube_Content"
                   />
+                  <p>{item.snippet.title}</p>
                </div>
             );
          });
@@ -149,8 +155,14 @@ export default class YoutubeVideo extends Component {
                <div className="DefineImageRow_Container">
                   <p
                      className="DefineImageRow_Button"
-                     onClick={() => this.changeNum('Increment', 10)}>
+                     onClick={() => this.changeNum('Increment', 12)}>
                      Show More
+                  </p>
+
+                  <p
+                     className="DefineImageRow_Button"
+                     onClick={() => this.changeNum('ShowAll')}>
+                     Show All
                   </p>
                </div>
             </div>

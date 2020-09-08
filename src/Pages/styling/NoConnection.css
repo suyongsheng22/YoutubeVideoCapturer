@@ -1,0 +1,299 @@
+.NoConnection_Container {
+  width: 100%;
+  height: auto;
+  background: white;
+}
+
+.NoConnection_Container .NoConnection_Center {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background: white;
+  overflow-x: hidden;
+}
+
+.NoConnection_Container .NoConnection_Center .NoConnection_ImageContainer {
+  height: 400px;
+  width: 100%;
+  -webkit-transition: all linear 2s;
+  transition: all linear 2s;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.NoConnection_Container .NoConnection_Center .NoConnection_ImageContainer .NoConnection {
+  width: 600px;
+  height: 400px;
+  position: relative;
+}
+
+.NoConnection_Container .NoConnection_Center .NoConnection_ImageContainer .NoConnection.Left {
+  left: 20px;
+  -webkit-animation: seperateleft 2s linear infinite;
+          animation: seperateleft 2s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.NoConnection_Container .NoConnection_Center .NoConnection_ImageContainer .NoConnection.Right {
+  right: 22px;
+  -webkit-animation: seperateright 2s linear infinite;
+          animation: seperateright 2s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes seperateleft {
+  0% {
+    left: 20px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+@keyframes seperateleft {
+  0% {
+    left: 20px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+@-webkit-keyframes seperateright {
+  0% {
+    right: 22px;
+  }
+  100% {
+    right: -18px;
+  }
+}
+
+@keyframes seperateright {
+  0% {
+    right: 22px;
+  }
+  100% {
+    right: -18px;
+  }
+}
+
+.NoConnection_Container .NoConnection_Center p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.NoConnection_Container .NoConnection_Center p .NoConnection_Emoji {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  border: 1px solid black;
+  top: 3px;
+  margin: 0px 2px 0px;
+  background: #358acf;
+  color: white;
+  padding: 0px 2px 0px 2px;
+}
+
+.NoConnection_Container .NoConnection_Center .NoConnection_Reload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: red;
+}
+
+.NoConnection_Container .NoConnection_Center .NoConnection_Reload p {
+  color: black;
+  font-weight: bold;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+.NoConnection_Container .NoConnection_Center .NoConnection_Reload .NoConnection_Button {
+  height: 30px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid red;
+  border-radius: 100px;
+  cursor: pointer;
+  margin: 0px 10px 0px;
+}
+
+.NoConnection_Container .NoConnection_Center .NoConnection_Reload .NoConnection_Button:hover {
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.NoInternet_Animation_Container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  background: white;
+}
+
+.NoInternetAnimation {
+  width: 300px;
+  height: 300px;
+  border: 20px solid red;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.NoInternetAnimation img {
+  width: 80%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  height: 80%;
+}
+
+.Slices {
+  background: red;
+  position: absolute;
+  background: red;
+}
+
+.Slices.Left {
+  height: 20px;
+  width: 300px;
+  left: 0;
+  -webkit-animation: 1.5s increaseW linear infinite;
+          animation: 1.5s increaseW linear infinite;
+}
+
+.Slices.Right {
+  top: 0px;
+  height: 300px;
+  width: 20px;
+  -webkit-animation: 1.5s increaseH linear infinite;
+          animation: 1.5s increaseH linear infinite;
+}
+
+@-webkit-keyframes increaseW {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 400px;
+  }
+}
+
+@keyframes increaseW {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 400px;
+  }
+}
+
+@-webkit-keyframes increaseH {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 400px;
+  }
+}
+
+@keyframes increaseH {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 400px;
+  }
+}
+/*# sourceMappingURL=NoConnection.css.map */

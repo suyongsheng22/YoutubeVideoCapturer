@@ -1,0 +1,187 @@
+@mixin flexbox {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.NoConnection_Container {
+   width: 100%;
+   height: auto;
+   background: white;
+
+   .NoConnection_Center {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include flexbox();
+      flex-direction: column;
+      text-align: center;
+      background: white;
+      overflow-x: hidden;
+      .NoConnection_ImageContainer {
+         height: 400px;
+         width: 100%;
+         transition: all linear 2s;
+         flex-direction: row;
+         @include flexbox();
+
+         .NoConnection {
+            width: 600px;
+            height: 400px;
+            position: relative;
+         }
+         .NoConnection.Left {
+            left: 20px;
+            animation: seperateleft 2s linear infinite;
+            animation-delay: 1s;
+         }
+
+         .NoConnection.Right {
+            right: 22px;
+            animation: seperateright 2s linear infinite;
+            animation-delay: 1s;
+         }
+
+         @keyframes seperateleft {
+            0% {
+               left: 20px;
+            }
+
+            100% {
+               left: -20px;
+            }
+         }
+
+         @keyframes seperateright {
+            0% {
+               right: 22px;
+            }
+
+            100% {
+               right: -18px;
+            }
+         }
+      }
+      p {
+         font-family: 'Times New Roman', Times, serif;
+         font-size: 15px;
+         letter-spacing: 2px;
+
+         .NoConnection_Emoji {
+            width: 16px;
+            height: 16px;
+            position: relative;
+            border: 1px solid black;
+            top: 3px;
+            margin: 0px 2px 0px;
+            background: #358acf;
+            color: white;
+            padding: 0px 2px 0px 2px;
+         }
+      }
+      .NoConnection_Reload {
+         @include flexbox();
+         flex-direction: row;
+         color: red;
+
+         p {
+            color: black;
+            font-weight: bold;
+            font-family: monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 15px;
+         }
+         .NoConnection_Button {
+            height: 30px;
+            width: 30px;
+            @include flexbox();
+            border: 1px solid red;
+            border-radius: 100px;
+            cursor: pointer;
+            margin: 0px 10px 0px;
+         }
+
+         .NoConnection_Button:hover {
+            animation: rotate 3s linear infinite;
+         }
+         @keyframes rotate {
+            0% {
+               transform: rotate(0deg);
+            }
+
+            100% {
+               transform: rotate(360deg);
+            }
+         }
+      }
+   }
+}
+.NoInternet_Animation_Container {
+   width: 100%;
+   height: 100%;
+   @include flexbox();
+   position: absolute;
+
+   background: white;
+}
+.NoInternetAnimation {
+   width: 300px;
+   height: 300px;
+   border: 20px solid red;
+   transform: rotate(45deg);
+   border-radius: 100%;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   img {
+      width: 80%;
+      transform: rotate(-45deg);
+      height: 80%;
+   }
+}
+.Slices {
+   background: red;
+   position: absolute;
+   background: red;
+}
+
+.Slices.Left {
+   height: 20px;
+   width: 300px;
+
+   left: 0;
+   animation: 1.5s increaseW linear infinite;
+}
+
+.Slices.Right {
+   top: 0px;
+   height: 300px;
+   width: 20px;
+   animation: 1.5s increaseH linear infinite;
+}
+
+@keyframes increaseW {
+   0% {
+      width: 0px;
+   }
+
+   100% {
+      width: 400px;
+   }
+}
+
+@keyframes increaseH {
+   0% {
+      height: 0px;
+   }
+
+   100% {
+      height: 400px;
+   }
+}
